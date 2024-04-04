@@ -11,7 +11,7 @@ public class StatsCalculator
         return new Stats(
             min: 0,
             max: 0,
-            num: 1,
+            num: numbers.Count(),
             avg: 0
         );
     }

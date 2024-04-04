@@ -14,4 +14,9 @@ public record Stats
         _num = num;
         _avg = avg;
     }
+
+    public override string ToString()
+    {
+        return $"{nameof(_min)}: {_min}, {nameof(_max)}: {_max}, {nameof(_num)}: {_num}, {nameof(_avg)}: {_avg}";
+    }
 }
