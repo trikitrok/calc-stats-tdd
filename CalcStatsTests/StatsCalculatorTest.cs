@@ -17,18 +17,19 @@ public class StatsCalculatorTest
     }
 
     [Test]
-    public void Computes_Stats_For_A_Sequence_Containing_One_Element()
+    [TestCase(0)]
+    public void Computes_Stats_For_A_Sequence_Containing_One_Element(int value)
     {
-        List<int> numbers = new() { 0 };
+        List<int> numbers = new() { value };
 
         var stats = StatsCalculator.Calculate(numbers);
 
         Assert.That(stats, Is.EqualTo(
             new Stats(
-                min: 0,
-                max: 0,
+                min: value,
+                max: value,
                 num: 1,
-                avg: 0
+                avg: value
             )));
     }
     
