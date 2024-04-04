@@ -12,7 +12,7 @@ public class StatsCalculator
             min: numbers.Count == 2 ? numbers[1]: numbers[0],
             max: numbers[0],
             num: numbers.Count,
-            avg: 0
+            avg: ((numbers.Count == 2 ? numbers[1]: 0) + numbers[0])/(decimal)numbers.Count
         );
     }
 }

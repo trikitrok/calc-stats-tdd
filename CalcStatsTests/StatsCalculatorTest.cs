@@ -35,7 +35,8 @@ public class StatsCalculatorTest
     
     [Test]
     [TestCase(0,0, 0)]
-    public void Computes_Stats_For_A_Sequence_Containing_Two_Elements(int value1, int value2, int expectedAvg)
+    [TestCase(1,0, 0.5)]
+    public void Computes_Stats_For_A_Sequence_Containing_Two_Elements(int value1, int value2, decimal expectedAvg)
     {
         List<int> numbers = new() { value1, value2 };
 
