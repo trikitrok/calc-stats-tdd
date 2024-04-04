@@ -12,7 +12,12 @@ public class StatsCalculator
             min: numbers.Count == 2 ? numbers[1]: numbers[0],
             max: numbers[0],
             num: numbers.Count,
-            avg: numbers.AsQueryable().Sum()/(decimal)numbers.Count
+            avg: ComputeAverage(numbers)
         );
+    }
+
+    private static decimal ComputeAverage(List<int> numbers)
+    {
+        return numbers.AsQueryable().Sum()/(decimal)numbers.Count;
     }
 }
