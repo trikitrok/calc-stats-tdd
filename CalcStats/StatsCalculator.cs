@@ -10,7 +10,7 @@ public class StatsCalculator
         }
         return new Stats(
             min: numbers.Count == 2 ? numbers[1]: numbers[0],
-            max: numbers[0],
+            max: Math.Max(numbers[0], numbers.Count==3 ? numbers[2]: numbers[0]),
             num: numbers.Count,
             avg: ComputeAverage(numbers)
         );

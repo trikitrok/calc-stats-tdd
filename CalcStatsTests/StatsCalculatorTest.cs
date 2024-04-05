@@ -50,4 +50,20 @@ public class StatsCalculatorTest
                 avg: expectedAvg
             )));
     }
+    
+    [Test]
+    public void Computes_Stats_For_A_Sequence_Containing_Three_Elements()
+    {
+        List<int> numbers = new() { 2, 2, 8 };
+
+        var stats = StatsCalculator.Calculate(numbers);
+
+        Assert.That(stats, Is.EqualTo(
+            new Stats(
+                min: 2,
+                max: 8,
+                num: 3,
+                avg: 4
+            )));
+    }
 }
