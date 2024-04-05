@@ -9,7 +9,7 @@ public class StatsCalculator
             throw new ArgumentException();
         }
         return new Stats(
-            min: numbers.Count == 2 ? numbers[1]: numbers[0],
+            min: numbers.Min(),
             max: numbers.Max(),
             num: numbers.Count,
             avg: ComputeAverage(numbers)

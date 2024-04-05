@@ -66,4 +66,20 @@ public class StatsCalculatorTest
                 avg: 4
             )));
     }
+    
+    [Test]
+    public void Computes_Stats_For_Another_Sequence_Containing_Two_Elements()
+    {
+        List<int> numbers = new() { 2, 8 };
+
+        var stats = StatsCalculator.Calculate(numbers);
+
+        Assert.That(stats, Is.EqualTo(
+            new Stats(
+                min: 2,
+                max: 8,
+                num: 2,
+                avg: 5
+            )));
+    }
 }
