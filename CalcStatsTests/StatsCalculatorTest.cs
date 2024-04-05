@@ -4,10 +4,6 @@ namespace CalcStatsTests;
 
 public class StatsCalculatorTest
 {
-    public StatsCalculatorTest()
-    {
-    }
-
     [Test]
     public void Throws_An_Exception_For_An_Empty_Sequence()
     {
